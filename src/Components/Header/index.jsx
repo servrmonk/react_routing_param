@@ -15,12 +15,26 @@
 // }
 
 import React from "react";
+import { Link } from "react-router-dom";
 import "./style.css";
 export default function Header({count}) {
   return (
     <div>
       <div className="header">
         <h1>Header Component</h1>
+        <ul>
+          <li>
+          {/* single page m page refresh nai hona chahiye anchor tag ki behaviour hai ki page (req ko server pr vejta hai aur server pr jkr new page load krta hai then we have to use link logic) */}
+            {/* <a href="/home">Home</a> */}
+            <Link to="/home">Home</Link>
+
+            
+          </li>
+          <li>
+            {/* <a href="#">About</a> */}
+            <Link to="/about">About</Link>
+          </li>
+        </ul>
         <h1>{count.count} items in the cart</h1>
       </div>
     </div>

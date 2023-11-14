@@ -14,11 +14,21 @@
 
 } */
 
-.header{
+.header {
     background-color: #f00;
     padding: 12px;
     margin: 12px;
     display: flex;
     justify-content: space-between;
 
+}
+
+.header ul {
+    list-style: none;
+    display: flex;
+}
+
+.header ul li {
+    list-style-type: none;
+    margin: 12px;
 }

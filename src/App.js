@@ -1,28 +1,47 @@
 import { useState } from "react";
 import Footer from "./Components/Footer";
-import Header from './Components/Header/index'
+import Header from "./Components/Header/index";
 
 import Home from "./Components/Pages/Home";
-import {product} from "./Components/data/product";
- 
+import { product } from "./Components/data/product";
+import About from "./Components/Pages/About";
+
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import SignIn from "./Components/Pages/Signin";
 
 function App() {
   const [storeProducts, setStoreProducts] = useState(product);
-  
-
-    const [cartCount,setCartCount] = useState({count:0})//pass non primitisve value only
-
-    const updateCart = ()=>{
-      const {count} = cartCount;
-      setCartCount({count:count+1}) //initial state is a state not a variable so u can't update directly
-      // console.log("Hello");
-    }
+  const [cartCount, setCartCount] = useState({ count: 0 });
+  const updateCart = () => {
+    const { count } = cartCount;
+    setCartCount({ count: count + 1 });
+  };
 
   return (
     <div className="container">
+      <BrowserRouter>
       <Header count={cartCount} />
-      <Home  count={cartCount}  products={storeProducts} updateCount={updateCart} />
-      {/* <Footer /> */}
+        <Routes>
+          <Route
+            path="/home"
+            element={
+              <Home
+                count={cartCount}
+                products={storeProducts}
+                updateCount={updateCart}
+              />
+            }
+          />
+          <Route path="/about" element={<About />} />
+          <Route path="/signin" element={<SignIn />} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
+
+      {/* <Header count={cartCount} />
+    
+      <About />
+      <Footer /> */}
     </div>
   );
 }
