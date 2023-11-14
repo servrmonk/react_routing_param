@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import Footer from "./Components/Footer";
+import Header from './Components/Header/index'
+
+import Home from "./Components/Pages/Home";
+import {product} from "./Components/data/product";
+ 
 
 function App() {
+  const [storeProducts, setStoreProducts] = useState(product);
+  
+
+    const [cartCount,setCartCount] = useState({count:0})//pass non primitisve value only
+
+    const updateCart = ()=>{
+      const {count} = cartCount;
+      setCartCount({count:count+1}) //initial state is a state not a variable so u can't update directly
+      // console.log("Hello");
+    }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <Header count={cartCount} />
+      <Home  count={cartCount}  products={storeProducts} updateCount={updateCart} />
+      {/* <Footer /> */}
     </div>
   );
 }
