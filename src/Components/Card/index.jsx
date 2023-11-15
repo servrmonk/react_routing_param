@@ -3,7 +3,12 @@ import { Link } from "react-router-dom";
 import './styles.css'
 
 export default function Card({ prod, count, updateCount }) {
-  console.log(count);
+  // console.log(count);
+
+  
+  let titleSlug = prod.title.replace(/\s+/g, '-').toLowerCase();
+  
+
   return (
     // <Link to="/product">
       <div className="card">
@@ -11,7 +16,7 @@ export default function Card({ prod, count, updateCount }) {
           <img src={prod.image} alt="productimage" />
         </div>
         <div className="card-body">
-          <Link className="card-link" to={`/product/${prod.title}`} >
+          <Link className="card-link" to={`/product/${titleSlug}`} >
           {/* <Link className="card-link" to={`/product/${prod.id}`} > */}
             {/* sirft title clickable ho gya if u want ki puri ki puri card clickable ho than u can simply use div k uper link tag */}
             <h2>{prod.title}</h2>
