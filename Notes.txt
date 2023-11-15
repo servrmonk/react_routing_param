@@ -1,0 +1,1 @@
+first thing : jaise hi mai yaha pr ya koi  vproduct pr clik kru uska url build ho jae kisi v chij me link add krne k lie hm use krte hai link component because anchor tag request server pr vejta hai that's y we don't want to send request to the server so we need the link tag 

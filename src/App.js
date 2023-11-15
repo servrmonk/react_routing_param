@@ -20,7 +20,7 @@ function App() {
   return (
     <div className="container">
       <BrowserRouter>
-      <Header count={cartCount} />
+        <Header count={cartCount} />
         <Routes>
           <Route
             path="/home"
@@ -37,11 +37,6 @@ function App() {
         </Routes>
         <Footer />
       </BrowserRouter>
-
-      {/* <Header count={cartCount} />
-    
-      <About />
-      <Footer /> */}
     </div>
   );
 }
