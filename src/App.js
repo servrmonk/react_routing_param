@@ -24,7 +24,7 @@ function App() {
         <Header count={cartCount} />
         <Routes>
           <Route
-            path="/home"
+            path="/"
             element={
               <Home
                 count={cartCount}

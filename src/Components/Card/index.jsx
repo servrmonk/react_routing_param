@@ -2,9 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./styles.css";
 
-export default function Card({ prod, count, updateCount }) {
+export default function Card({ prod,key, count, updateCount }) {
+
+
   return (
-    <div className="card">
+    <div  className="card">
       <div className="card-image">
         <img src={prod.image} alt="productimage" />
       </div>

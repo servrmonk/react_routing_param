@@ -1,1 +1,6 @@
 first thing : jaise hi mai yaha pr ya koi  vproduct pr clik kru uska url build ho jae kisi v chij me link add krne k lie hm use krte hai link component because anchor tag request server pr vejta hai that's y we don't want to send request to the server so we need the link tag 
+
+https://github.com/raushan2409/react_routing_param/commit/90ebb10d358b5bcc2637ac31afa9d8e615c543fb
+after this commit 
+
+next challange is if main kisi v card pr clik krta hoon to new component render hona chahiye and us component me us card ki details ho details means pura descrption hm home page pr sirf title and product price rakhe and hm chahte hai ki kisi v product pr click kru to new page render ho usme descrption ho (details ho jis v product pe main click kru)
