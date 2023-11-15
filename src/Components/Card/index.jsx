@@ -11,7 +11,7 @@ export default function Card({ prod, count, updateCount }) {
           <img src={prod.image} alt="productimage" />
         </div>
         <div className="card-body">
-          <Link className="card-link" to="/product">
+          <Link className="card-link" to={`/product/${prod.id}`} >
             {/* sirft title clickable ho gya if u want ki puri ki puri card clickable ho than u can simply use div k uper link tag */}
             <h2>{prod.title}</h2>
           </Link>
