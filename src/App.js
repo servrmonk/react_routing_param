@@ -8,6 +8,7 @@ import About from "./Components/Pages/About";
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import SignIn from "./Components/Pages/Signin";
+import Detail from "./Components/Pages/Detail";
 
 function App() {
   const [storeProducts, setStoreProducts] = useState(product);
@@ -34,6 +35,8 @@ function App() {
           />
           <Route path="/about" element={<About />} />
           <Route path="/signin" element={<SignIn />} />
+          {/* lekin is case me pura path exactly to match nai ho raa hai ye bs adha match ho raa hai /product adha part dynamic hai and adha part static */}
+          <Route path="/product" element={<Detail />} />
         </Routes>
         <Footer />
       </BrowserRouter>
